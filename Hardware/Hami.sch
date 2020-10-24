@@ -341,21 +341,6 @@ F 3 "" H 7575 3550 60  0001 C CNN
 	1    7575 3550
 	-1   0    0    -1  
 $EndComp
-Text GLabel 4000 3250 0    50   Input ~ 0
-RESET
-Wire Wire Line
-	4100 3250 4000 3250
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5E7DD54D
-P 4300 3250
-F 0 "SW1" H 4300 3535 50  0000 C CNN
-F 1 "Reset" H 4300 3444 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 4300 3450 50  0001 C CNN
-F 3 "~" H 4300 3450 50  0001 C CNN
-	1    4300 3250
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:D_Small D1
 U 1 1 5DAD8119
@@ -580,49 +565,6 @@ Connection ~ 6225 3900
 Connection ~ 7125 3900
 Wire Wire Line
 	7125 3900 7625 3900
-$Comp
-L Device:R_Small R1
-U 1 1 5F74D470
-P 4100 3050
-F 0 "R1" H 4041 3004 50  0000 R CNN
-F 1 "R_Small" H 4041 3095 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4100 3050 50  0001 C CNN
-F 3 "~" H 4100 3050 50  0001 C CNN
-	1    4100 3050
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	4100 3150 4100 3250
-Connection ~ 4100 3250
-$Comp
-L power:VCC #PWR0102
-U 1 1 5F7A076F
-P 4100 2950
-F 0 "#PWR0102" H 4100 2800 50  0001 C CNN
-F 1 "VCC" H 4115 3123 50  0000 C CNN
-F 2 "" H 4100 2950 50  0001 C CNN
-F 3 "" H 4100 2950 50  0001 C CNN
-	1    4100 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 3200 1850 2    50   Input ~ 0
-ROW1
-Text GLabel 3200 2050 2    50   Input ~ 0
-ROW3
-Text GLabel 3200 2150 2    50   Input ~ 0
-ROW4
-Text GLabel 3200 2250 2    50   Input ~ 0
-ROW5
-Text GLabel 3200 1950 2    50   Input ~ 0
-ROW2
-Text GLabel 3200 1750 2    50   Input ~ 0
-COL4
-Text GLabel 3200 2450 2    50   Input ~ 0
-COL2
-Text GLabel 1800 2450 0    50   Input ~ 0
-COL1
-Text GLabel 3200 2350 2    50   Input ~ 0
-COL3
 Wire Wire Line
 	6225 3900 6675 3900
 $Comp
@@ -634,17 +576,6 @@ F 1 "VCC" H 4075 1450 50  0000 C CNN
 F 2 "" H 4075 1300 50  0001 C CNN
 F 3 "" H 4075 1300 50  0001 C CNN
 	1    4075 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 5F95AA4D
-P 3775 1350
-F 0 "J2" H 3855 1342 50  0000 L CNN
-F 1 "BAT" H 3855 1251 50  0000 L CNN
-F 2 "Hami:Battery_Solder_Points" H 3775 1350 50  0001 C CNN
-F 3 "~" H 3775 1350 50  0001 C CNN
-	1    3775 1350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -726,9 +657,6 @@ Text GLabel 1800 1850 0    50   Input ~ 0
 SCL
 Text GLabel 1800 1750 0    50   Input ~ 0
 SDA
-NoConn ~ 1800 1950
-NoConn ~ 1800 1450
-NoConn ~ 1800 1350
 $Comp
 L power:GND #PWR0105
 U 1 1 5F6F6712
@@ -742,7 +670,6 @@ F 3 "" H 3575 1450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3575 1450 3200 1450
-Connection ~ 3575 1450
 Wire Wire Line
 	3200 1350 3575 1350
 Wire Wire Line
@@ -790,17 +717,6 @@ Wire Wire Line
 	5000 1400 5000 1200
 Wire Wire Line
 	5000 1200 5100 1200
-$Comp
-L power:GND #PWR0107
-U 1 1 5F784E37
-P 4500 3250
-F 0 "#PWR0107" H 4500 3000 50  0001 C CNN
-F 1 "GND" H 4575 3100 50  0000 R CNN
-F 2 "" H 4500 3250 50  0001 C CNN
-F 3 "" H 4500 3250 50  0001 C CNN
-	1    4500 3250
-	1    0    0    -1  
-$EndComp
 Text GLabel 4900 1300 0    50   Input ~ 0
 Rot_1A
 Text GLabel 4900 1100 0    50   Input ~ 0
@@ -818,19 +734,6 @@ Wire Wire Line
 Wire Wire Line
 	4900 3700 5100 3700
 $Comp
-L Hami:ProMicro U1
-U 1 1 5D85EAF7
-P 2500 1900
-F 0 "U1" H 2500 2737 60  0000 C CNN
-F 1 "ProMicro" H 2500 2631 60  0000 C CNN
-F 2 "Hami:ArduinoProMicro_Blank" V 3550 -600 60  0001 C CNN
-F 3 "" V 3550 -600 60  0001 C CNN
-	1    2500 1900
-	1    0    0    -1  
-$EndComp
-NoConn ~ 1800 1650
-NoConn ~ 1800 1550
-$Comp
 L power:GND #PWR0101
 U 1 1 5F7C7BC9
 P 2800 3350
@@ -841,19 +744,46 @@ F 3 "" H 2800 3350 50  0001 C CNN
 	1    2800 3350
 	1    0    0    -1  
 $EndComp
-Text GLabel 1800 2350 0    50   Input ~ 0
-Rot_1B
-Text GLabel 1800 2250 0    50   Input ~ 0
-Rot_1A
-Text GLabel 1800 2150 0    50   Input ~ 0
-Rot_2B
-Text GLabel 1800 2050 0    50   Input ~ 0
-Rot_2A
 $Comp
-L power:GND #PWR?
+L Hami:ProMicro U1
+U 1 1 5D85EAF7
+P 2500 1900
+F 0 "U1" H 2500 2737 60  0000 C CNN
+F 1 "ProMicro" H 2500 2631 60  0000 C CNN
+F 2 "Hami:ArduinoProMicro_Blank" V 3550 -600 60  0001 C CNN
+F 3 "" V 3550 -600 60  0001 C CNN
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E7DD54D
+P 4300 3250
+F 0 "SW1" H 4300 3535 50  0000 C CNN
+F 1 "Reset" H 4300 3444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 4300 3450 50  0001 C CNN
+F 3 "~" H 4300 3450 50  0001 C CNN
+	1    4300 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 4100 3250 0    50   Input ~ 0
+RESET
+$Comp
+L power:GND #PWR0107
+U 1 1 5F784E37
+P 4500 3250
+F 0 "#PWR0107" H 4500 3000 50  0001 C CNN
+F 1 "GND" H 4575 3100 50  0000 R CNN
+F 2 "" H 4500 3250 50  0001 C CNN
+F 3 "" H 4500 3250 50  0001 C CNN
+	1    4500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
 U 1 1 5F7F8187
 P 5000 3800
-F 0 "#PWR?" H 5000 3550 50  0001 C CNN
+F 0 "#PWR0106" H 5000 3550 50  0001 C CNN
 F 1 "GND" H 5075 3650 50  0000 R CNN
 F 2 "" H 5000 3800 50  0001 C CNN
 F 3 "" H 5000 3800 50  0001 C CNN
@@ -861,14 +791,57 @@ F 3 "" H 5000 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0108
 U 1 1 5F7F8606
 P 5000 1400
-F 0 "#PWR?" H 5000 1150 50  0001 C CNN
+F 0 "#PWR0108" H 5000 1150 50  0001 C CNN
 F 1 "GND" H 5075 1250 50  0000 R CNN
 F 2 "" H 5000 1400 50  0001 C CNN
 F 3 "" H 5000 1400 50  0001 C CNN
 	1    5000 1400
 	1    0    0    -1  
 $EndComp
+Text GLabel 1800 2450 0    50   Input ~ 0
+COL1
+NoConn ~ 1800 1950
+NoConn ~ 1800 1650
+NoConn ~ 1800 1550
+NoConn ~ 1800 1450
+NoConn ~ 1800 1350
+Text GLabel 3200 2350 2    50   Input ~ 0
+COL3
+Text GLabel 3200 2450 2    50   Input ~ 0
+COL2
+Text GLabel 3200 1750 2    50   Input ~ 0
+COL4
+Text GLabel 3200 1950 2    50   Input ~ 0
+ROW2
+Text GLabel 3200 2250 2    50   Input ~ 0
+ROW5
+Text GLabel 3200 2150 2    50   Input ~ 0
+ROW4
+Text GLabel 3200 2050 2    50   Input ~ 0
+ROW3
+Text GLabel 3200 1850 2    50   Input ~ 0
+ROW1
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5F95AA4D
+P 3775 1450
+F 0 "J2" H 3855 1442 50  0000 L CNN
+F 1 "BAT" H 3855 1351 50  0000 L CNN
+F 2 "Hami:Battery_Solder_Points" H 3775 1450 50  0001 C CNN
+F 3 "~" H 3775 1450 50  0001 C CNN
+	1    3775 1450
+	1    0    0    1   
+$EndComp
+Connection ~ 3575 1450
+Text GLabel 1800 2050 0    50   Input ~ 0
+Rot_2A
+Text GLabel 1800 2150 0    50   Input ~ 0
+Rot_2B
+Text GLabel 1800 2250 0    50   Input ~ 0
+Rot_1A
+Text GLabel 1800 2350 0    50   Input ~ 0
+Rot_1B
 $EndSCHEMATC
